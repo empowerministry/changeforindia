@@ -1,0 +1,82 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images will be stored
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Define editable pages
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "index.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", hint: "The browser tab title" }
+          - { label: "Page Content", name: "body", widget: "code", default_language: "html", hint: "Edit the HTML content of this page" }
+
+      - label: "How It Began"
+        name: "how-it-began"
+        file: "how-it-began.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+
+      - label: "Education"
+        name: "education"
+        file: "education.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+
+      - label: "Health Clinics"
+        name: "health-clinics"
+        file: "health-clinics.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+
+      - label: "Evangelism"
+        name: "evangelism"
+        file: "evangelism.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+
+      - label: "Updates & Blogs"
+        name: "updates-blogs"
+        file: "updates-blogs.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+
+      - label: "Gallery"
+        name: "gallery"
+        file: "gallery.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+
+      - label: "Get Involved"
+        name: "get-involved"
+        file: "get-involved.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+
+      - label: "Donate"
+        name: "donate"
+        file: "donate.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+
+      - label: "Contact"
+        name: "contact"
+        file: "contact.html"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string" }
+          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
