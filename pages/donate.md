@@ -45,7 +45,6 @@ permalink: /donate/
       <p>Choose a donation option below or contact us to discuss other giving opportunities. Clicking donate will take you to our QuestX Stripe payment processing.</p>
     </div>
 
-```
 <div class="donate-options">
   <div class="donate-card">
     <div class="donate-amount">$30</div>
@@ -74,7 +73,6 @@ permalink: /donate/
   <p><strong>All donations are tax-deductible.</strong></p>
   <p class="mt-1">For questions about donating or to discuss other giving options, please contact us at <a href="mailto:hannah@changeforindia.net">hannah@changeforindia.net</a></p>
 </div>
-```
 
   </div>
 </section>
