@@ -1,0 +1,13 @@
+{
+  "name": "changeforindia",
+  "version": "1.0.0",
+  "description": "Change for India - Mission trips to rural India",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

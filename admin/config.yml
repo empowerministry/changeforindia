@@ -3,8 +3,8 @@ backend:
   branch: main
 
 # Where uploaded images will be stored
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "uploads"
+public_folder: "/uploads"
 
 # Define editable pages
 collections:
@@ -13,70 +13,110 @@ collections:
     files:
       - label: "Home Page"
         name: "home"
-        file: "index.html"
+        file: "pages/index.md"
         fields:
-          - { label: "Page Title", name: "title", widget: "string", hint: "The browser tab title" }
-          - { label: "Page Content", name: "body", widget: "code", default_language: "html", hint: "Edit the HTML content of this page" }
-
-      - label: "How It Began"
-        name: "how-it-began"
-        file: "how-it-began.html"
-        fields:
-          - { label: "Page Title", name: "title", widget: "string" }
-          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", hint: "SEO meta description" }
+          - { label: "Hero Image", name: "heroImage", widget: "image", hint: "Background image for the hero banner" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string", hint: "Large text displayed on the hero banner" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string", hint: "Smaller text below the hero title" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
       - label: "Education"
         name: "education"
-        file: "education.html"
+        file: "pages/education.md"
         fields:
-          - { label: "Page Title", name: "title", widget: "string" }
-          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", hint: "SEO meta description" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
       - label: "Health Clinics"
         name: "health-clinics"
-        file: "health-clinics.html"
+        file: "pages/health-clinics.md"
         fields:
-          - { label: "Page Title", name: "title", widget: "string" }
-          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", hint: "SEO meta description" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
       - label: "Evangelism"
         name: "evangelism"
-        file: "evangelism.html"
+        file: "pages/evangelism.md"
         fields:
-          - { label: "Page Title", name: "title", widget: "string" }
-          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", hint: "SEO meta description" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "How It Began"
+        name: "how-it-began"
+        file: "pages/how-it-began.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", hint: "SEO meta description" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
       - label: "Updates & Blogs"
         name: "updates-blogs"
-        file: "updates-blogs.html"
+        file: "pages/updates-blogs.md"
         fields:
-          - { label: "Page Title", name: "title", widget: "string" }
-          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", hint: "SEO meta description" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
       - label: "Gallery"
         name: "gallery"
-        file: "gallery.html"
+        file: "pages/gallery.md"
         fields:
-          - { label: "Page Title", name: "title", widget: "string" }
-          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", hint: "SEO meta description" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
       - label: "Get Involved"
         name: "get-involved"
-        file: "get-involved.html"
+        file: "pages/get-involved.md"
         fields:
-          - { label: "Page Title", name: "title", widget: "string" }
-          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", hint: "SEO meta description" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
       - label: "Donate"
         name: "donate"
-        file: "donate.html"
+        file: "pages/donate.md"
         fields:
-          - { label: "Page Title", name: "title", widget: "string" }
-          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", hint: "SEO meta description" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
       - label: "Contact"
         name: "contact"
-        file: "contact.html"
+        file: "pages/contact.md"
         fields:
-          - { label: "Page Title", name: "title", widget: "string" }
-          - { label: "Page Content", name: "body", widget: "code", default_language: "html" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", hint: "SEO meta description" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }

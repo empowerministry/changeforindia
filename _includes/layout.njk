@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ description }}">
+  {% if title %}
+  <meta property="og:title" content="{{ title }} - Change for India">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:type" content="website">
+  {% endif %}
+  <title>{{ title }} - Change for India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="/" class="logo">Change for India</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-menu">
+        <li><a href="/"{% if page.url == "/" %} class="active"{% endif %}>About</a></li>
+        <li><a href="/education/"{% if page.url == "/education/" %} class="active"{% endif %}>Education</a></li>
+        <li><a href="/health-clinics/"{% if page.url == "/health-clinics/" %} class="active"{% endif %}>Health Clinics</a></li>
+        <li><a href="/evangelism/"{% if page.url == "/evangelism/" %} class="active"{% endif %}>Evangelism</a></li>
+        <li><a href="/get-involved/"{% if page.url == "/get-involved/" %} class="active"{% endif %}>Get Involved</a></li>
+        <li><a href="/how-it-began/"{% if page.url == "/how-it-began/" %} class="active"{% endif %}>How It Began</a></li>
+        <li><a href="/updates-blogs/"{% if page.url == "/updates-blogs/" %} class="active"{% endif %}>Updates</a></li>
+        <li><a href="/gallery/"{% if page.url == "/gallery/" %} class="active"{% endif %}>Gallery</a></li>
+        <li><a href="/contact/"{% if page.url == "/contact/" %} class="active"{% endif %}>Contact</a></li>
+        <li><a href="/donate/" class="btn-donate{% if page.url == "/donate/" %} active{% endif %}">Donate</a></li>
+      </ul>
+    </nav>
+    <div class="nav-overlay"></div>
+  </header>
+
+  <main>
+    {% if heroImage %}
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('{{ heroImage }}');">
+      <div class="hero-content">
+        <h1>{{ heroTitle if heroTitle else title }}</h1>
+        {% if heroSubtitle %}<p>{{ heroSubtitle }}</p>{% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    {{ content | safe }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h4>Change for India</h4>
+          <p>Bringing hope and making a lasting difference in rural India since 2007.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/get-involved/">Get Involved</a></li>
+            <li><a href="/donate/">Donate</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Email: <a href="mailto:hannah@changeforindia.net">hannah@changeforindia.net</a></p>
+          <p>All donations are tax-deductible.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Change for India. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>
